@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="theme-color" content="#ef8d2f" />
+  <title>Jump and Groove V4</title>
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main id="app" class="app">
+    <section id="startScreen" class="start-screen" aria-label="Startbildschirm">
+      <img src="assets/startscreen.png" alt="Jump and Groove Startbild" />
+      <div class="start-copy">
+        <div class="logo">JUMP & GROOVE</div>
+        <h1>Tippe zum Starten</h1>
+        <p>Kurz tippen = kleiner Sprung. Länger drücken = hoher Sprung. Punkte gibt es nur für Münzen.</p>
+      </div>
+    </section>
+
+    <section class="hud" aria-label="Spielanzeige">
+      <div class="brand">JUMP & GROOVE</div>
+      <div class="meter"><span id="powerFill"></span></div>
+      <div class="stat">Score <b id="score">0</b></div>
+      <div class="stat">Coins <b id="coins">0</b></div>
+    </section>
+
+    <section id="stage" class="stage" aria-label="Spielfeld">
+      <div class="sun"></div>
+      <div class="cloud cloud-a"></div>
+      <div class="cloud cloud-b"></div>
+      <div class="uluru"></div>
+      <div class="ridge ridge-a"></div>
+      <div class="ridge ridge-b"></div>
+      <div class="track track-back"></div>
+      <div class="track track-front"></div>
+      <div id="cue" class="cue">JUMP</div>
+      <div id="objects" class="objects"></div>
+      <div id="roo" class="roo">
+        <div class="tail"></div>
+        <div class="body"></div>
+        <div class="belly"></div>
+        <div class="leg leg-a"></div>
+        <div class="leg leg-b"></div>
+        <div class="arm"></div>
+        <div class="neck"></div>
+        <div class="head"></div>
+        <div class="snout"></div>
+        <div class="eye"></div>
+        <div class="ear ear-a"></div>
+        <div class="ear ear-b"></div>
+        <div class="cap-brim"></div>
+        <div class="cap-top"></div>
+      </div>
+      <div id="message" class="message"></div>
+    </section>
+
+    <section class="tap-layer" id="tapLayer" aria-label="Tap zum Springen"></section>
+    <audio id="music" src="assets/didgeridoo-rave.mp3" preload="auto" playsinline></audio>
+  </main>
+  <script src="game.js"></script>
+</body>
+</html>
